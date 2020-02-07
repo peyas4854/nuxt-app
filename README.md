@@ -1,4 +1,4 @@
-# First branch of nuxt app 
+# weather app
 
 ## Build Setup
 
