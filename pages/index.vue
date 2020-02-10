@@ -1,55 +1,22 @@
 <template>
 <v-container>
-
    <v-flex xs12>
     <div>
-    	<v-simple-table>
+      <h1> I am pages index </h1>
     
-      <thead>
-        <tr>
-
-          <th class="text-left">   title   </th>
-
-
-          <th class="text-left">Email</th>
-          <th class="text-left">Phone</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(item,index) in user" :key="index">
-
-        	
-        	   <td> <N-link class="link" :to="'employee/'+ item.id" text > {{ item.title }} 	</N-link></td>
-        
-          
-
-          <td>{{ item.email }}</td>
-          <td>{{ item.phone }}</td>
-         
-        </tr>
-      </tbody>
-  </v-simple-table>
-    
-
-    	
-    </div>
-
-    
-    </v-flex>
-  </v-container>
+</div>
+  </v-flex>
+ </v-container>
 </template>
 
 <script>
 import axois from "axios"
-
 export default{
-
 data(){
 	return{
 		
 	}
 },
-
 async asyncData({ $axios }) {
   const user = await $axios.$get('https://jsonplaceholder.typicode.com/posts')
   //console.log(user);
@@ -79,11 +46,7 @@ async asyncData({ $axios }) {
 
  // }
 }
-
 </script>
 <style scoped>	
-.link{
-	text-decoration:none;
-	color:black!important;
-}
+
 </style>

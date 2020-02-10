@@ -1,6 +1,6 @@
 <template>
   <div>
-     <h1> I am blog Index All blog </h1>
+     <h1> I am blog Index  </h1>
   </div>
 </template>
 

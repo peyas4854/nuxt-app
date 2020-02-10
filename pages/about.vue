@@ -1,10 +1,7 @@
 <template>
     <div>
-        <nuxt-link to="/">Home </nuxt-link>
-
+       
         <h2>I am about page hggg  </h2>
-
-        
     </div>
 </template>
 <script>
@@ -14,9 +11,11 @@ export default{
     // middleware:'test',
     head(){
         return{
-            title:'about',
+            title:'About Page ',
             meta:[
-                {hid:'description',name:'description',content:'about page'}
+                {hid:'description',
+                name:'description',
+                content:'Nuxt js Toodo Application'}
             ],
         }
     }
