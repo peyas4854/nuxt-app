@@ -1,19 +1,7 @@
-# First branch of nuxt app 
+# Nuxt Todo Application 
 
-## Build Setup
+## Call axois from component  
+<p> 1. User index component call by async method </p>
+<p> 2. Dyanmmic user  component call by  method </p>
 
-``` bash
-# install dependencies
-$ npm run install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
+# jwt authentication nuxt application

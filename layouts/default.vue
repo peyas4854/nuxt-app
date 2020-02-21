@@ -1,48 +1,30 @@
 <template>
-<div>
-  <v-card
-    color="grey lighten-4"
-    flat
-    height="200px"
-    tile
-  >
-    <v-toolbar dense>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
-      <v-toolbar-title>Title</v-toolbar-title>
-      <v-spacer></v-spacer>
-       <v-toolbar-items class="hidden-sm-snd-down">
-         <v-btn text >
-        <nLink to="/">Home</nLink>
-      </v-btn>
-       <v-btn text>
-        <nLink to="/about">About</nLink>
-      </v-btn >
-       <v-btn text >
-        <nLink to="/inspire">Page 1</nLink>
-      </v-btn>
-
-      <v-btn text >
-        <nLink to="/blog">Blog</nLink>
-      </v-btn>
-      
-
-       </v-toolbar-items>
-    </v-toolbar>
-    <div>
-        <nuxt/>
-    </div>
-    
-  </v-card>
-  
-  </div>
+<v-app>
+  <v-content>
+    <navbar/>
+    <v-container >
+        <div>
+            <nuxt/>
+          </div>
+    </v-container>
+    <appfooter/>
+  </v-content>
+</v-app>
 </template>
-
 <script>
+import navbar from "../components/navbar.vue";
+import appfooter from "../components/appfooter.vue";
 export default {
-  data () {
-    return {
-      title: 'I am default Layout!'
-    }
+  components:{
+    navbar,
+    appfooter
   }
+  
 }
 </script>
+<style scoped>
+a{
+  text-decoration: none;
+  color:white!important;
+}
+</style>
