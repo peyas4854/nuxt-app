@@ -1,14 +1,14 @@
 <template>
   <v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
 <div>
-     <v-card >
+     <v-card class="text-center" >
         <v-list-item three-line>
         <v-list-item-content>
             <!-- <div class="overline mb-4">User name </div> -->
             <v-list-item-title class="headline mb-1">
                   {{ users.name }}  
             </v-list-item-title>
-            <v-list-item-subtitle>{{ users.email }}</v-list-item-subtitle>
+            <v-list-item-subtitle></v-list-item-subtitle>
              <v-list-item>
             <v-list-item-content>
                 <v-list-item-title v-if="users.email == users.email "><b>Email</b> :    {{ users.email }} </v-list-item-title>
@@ -19,8 +19,9 @@
         </v-list-item-content>
         </v-list-item>
         <v-card-actions>
-        <v-btn text  color="info">
-           <N-link  to="/user"  >  Back </N-link>
+        <v-btn text  color="info" >
+           <N-link  to="/user" >  Back </N-link>
+           <v-icon color="green"> mdi- </v-icon>
             </v-btn>
         </v-card-actions>
     </v-card>
@@ -56,8 +57,16 @@ export default {
     methods:{
         async fetchuser(id){
             const user = await this.$axios.$get(`https://jsonplaceholder.typicode.com/users/${this.id}`)
-            this.users = user;console.log("us",this.users);
+            this.users = user;
+           
         }
     }       
 }        
 </script>
+<style scoped>
+a{
+    
+   
+    text-decoration: none;
+}
+</style>
